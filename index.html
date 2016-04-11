@@ -89,11 +89,21 @@ With all this stuff, you will be able to create a simple and static web page, an
 <h3>HTML Example</h3>
 <div>
 <h5>A small HTML document:</h5>
- &lt;!DOCTYPE html&gt;<br>
-&lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>
- &lt;/head&gt;<br>
-&lt;body&gt;<br>&lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
-    &lt;/body&gt;<br>&lt;/html&gt;
+    <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+    &lt;head&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;h1&gt;My First Heading&lt;/h1&gt;
+        &lt;p&gt;My first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+
+&lt;/html&gt;
+    </code></pre>
 </div>
 <h3>Example Explained</h3>
 <div>
@@ -124,29 +134,29 @@ With all this stuff, you will be able to create a simple and static web page, an
                 <div>
                     <h3>1. HTML stands for?</h3>
                     <form>
-                        <input type="radio" name="quiz" id="quiz-html-1"> &lt;Hight Troll Markup Language&gt;<br>
-                        <input type="radio" name="quiz"> &lt;Hyper Text Markup Langague&gt;<br>
-                        <input type="radio" name="quiz"> &lt;Hyper Tea Malcom Lion&gt;<br>
-                        <input type="radio" name="quiz"> &lt;Hight Terrible Manner Length &gt;<br>
+                        <input type="radio" name="quiz" id="quiz-html-1"> Hight Troll Markup Language<br>
+                        <input type="radio" name="quiz"> Hyper Text Markup Langague<br>
+                        <input type="radio" name="quiz"> Hyper Tea Malcom Lion<br>
+                        <input type="radio" name="quiz"> Hight Terrible Manner Length<br>
                     </form>
 
-                    <h3>2. The <body> tag ?</h3>
+                    <h3>2. The &lt;body&gt; tag?</h3>
                     <form>
-                        <input type="radio" name="quiz"> &lt;describes a heading&gt;<br>
-                        <input type="radio" name="quiz"> &lt;provides a title for the document&gt;<br>
-                        <input type="radio" name="quiz" id="quiz-html-2"> &lt;describes the visible page content&gt;<br>
-                        <input type="radio" name="quiz"> &lt;describes a paragraph&gt;<br>
+                        <input type="radio" name="quiz"> Describes a heading<br>
+                        <input type="radio" name="quiz"> Provides a title for the document<br>
+                        <input type="radio" name="quiz" id="quiz-html-2"> Describes the visible page content<br>
+                        <input type="radio" name="quiz"> Describes a paragraph<br>
                     </form>
 
                     <h3>3. The purpose of a web browser is to?</h3>
                     <form>
-                        <input type="radio" name="quiz" > &lt;check Facebook Twitter and Instagram&gt;<br>
-                        <input type="radio" name="quiz"> &lt;display html tags &gt;<br>
-                        <input type="radio" name="quiz" id="quiz-html-3"> &lt;read HTML documents and display them&gt;<br>
-                        <input type="radio" name="quiz"> &lt;stream and watch tv-show &gt;<br>
+                        <input type="radio" name="quiz" > Check Facebook Twitter and Instagram<br>
+                        <input type="radio" name="quiz"> Display html tags<br>
+                        <input type="radio" name="quiz" id="quiz-html-3"> Read HTML documents and display them<br>
+                        <input type="radio" name="quiz"> Stream and watch tv-show<br>
                     </form>
 
-                    <h3>4. The correct syntax for the html body tag is ?</h3>
+                    <h3>4. The correct syntax for the html body tag is?</h3>
                     <form>
                         <input type="radio" name="quiz" id="quiz-html-4"> &lt; &lsaquo body &rsaquo ... &lsaquo /body &rsaquo&gt;<br>
                         <input type="radio" name="quiz"> &lt;&lsaquo body &rsaquo... &lsaquo body &rsaquo&gt;<br>
@@ -156,10 +166,10 @@ With all this stuff, you will be able to create a simple and static web page, an
 
                     <h3>5. This mooc was made with?</h3>
                     <form>
-                        <input type="radio" name="quiz" > &lt;Java&gt;<br>
-                        <input type="radio" name="quiz"> &lt;Magic&gt;<br>
-                        <input type="radio" name="quiz"> &lt;C++&gt;<br>
-                        <input type="radio" name="quiz" id="quiz-html-5"> &lt;HTML, CSS and Javascript &gt;<br>
+                        <input type="radio" name="quiz" > Java<br>
+                        <input type="radio" name="quiz"> Magic<br>
+                        <input type="radio" name="quiz"> C++<br>
+                        <input type="radio" name="quiz" id="quiz-html-5"> HTML, CSS and Javascript<br>
                     </form>
 
                     <div style="text-align:center">
@@ -178,6 +188,11 @@ With all this stuff, you will be able to create a simple and static web page, an
           <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 
             <div class="accordion">
+                <h3>What is JavaScript?</h3>
+                <div>
+                    <p>JavaScript is the programming language of HTML and the web, with javascript you can program the behavior of web pages.</p>
+                </div>
+
                 <h3>Example 1</h3>
                 <div>
                     <h4>index.html</h4>
@@ -241,7 +256,14 @@ function myFunction() {
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;body&gt;
-        &lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;
+        &lt;script src="myScript.js"&gt;&lt;/script&gt;
+
+        &lt;h1&gt;JavaScript in external file&lt;/h1&gt;
+
+        &lt;p id=&quot;demo&quot;&gt;A Paragraph.&lt;/p&gt;
+
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
     &lt;/body&gt;
 &lt;/html&gt;
                     </code></pre>
