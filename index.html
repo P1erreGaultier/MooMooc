@@ -18,10 +18,28 @@
 
     <script>
       $(function() {
-        $( ".accordion" ).accordion({collapsible: true, active: false});
+        $( ".accordion" ).accordion({collapsible: true, active: false, heightStyle: "content"});
       });
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        function check_quiz(name) {
+            var score = 0;
+            var total = 0;
+            var i = 1;
+            var element = null;
+
+            while((element = document.getElementById("quiz-"+name+"-"+i)) != null) {
+                total++;
+                if(element.checked) {
+                    score++;
+                }
+                i++
+            }
+
+            alert("Your score: "+score+"/"+total);
+        }
+    </script>
 
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -176,17 +194,48 @@ function myFunction() {
                 </div>
                 <h3>Quiz</h3>
                 <div>
-                    <p>
-                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-                        mauris vel est.
-                    </p>
-                    <p>
-                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                        inceptos himenaeos.
-                    </p>
+                    <h3>1. Inside which HTML element do we put the JavaScript?</h3>
+                    <form>
+                        <input type="radio" name="quiz" id="quiz-javascript-1"> &lt;script&gt;<br>
+                        <input type="radio" name="quiz"> &lt;js&gt;<br>
+                        <input type="radio" name="quiz"> &lt;scripting&gt;<br>
+                        <input type="radio" name="quiz"> &lt;javascript&gt;<br>
+                    </form>
+
+                    <h3>2. What is the correct JavaScript syntax to change the content of the HTML element below?</h3>
+                    <pre><code class="html">
+&lt;p id=&quot;demo&quot;&gt;This is a demonstration.&lt;/p&gt;
+                    </code></pre>
+                    <form>
+                        <input type="radio" name="quiz"> document.getElement(&quot;p&quot;).innerHTML = &quot;Hello World!&quot;;<br>
+                        <input type="radio" name="quiz" id="quiz-javascript-2"> document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello World!&quot;;<br>
+                        <input type="radio" name="quiz"> document.getElementByName(&quot;p&quot;).innerHTML = &quot;Hello World!&quot;;<br>
+                        <input type="radio" name="quiz"> #demo.innerHTML = &quot;Hello World!&quot;;<br>
+                    </form>
+
+                    <h3>3. Where is the correct place to insert a JavaScript?</h3>
+                    <form>
+                        <input type="radio" name="quiz"> The &lt;body&gt; section<br>
+                        <input type="radio" name="quiz"> The &lt;head&gt; section<br>
+                        <input type="radio" name="quiz" id="quiz-javascript-3"> Both the &lt;head&gt; section and the &lt;body&gt; section are correct<br>
+                    </form>
+
+                    <h3>4. What is the correct syntax for referring to an external script called "xxx.js"?</h3>
+                    <form>
+                        <input type="radio" name="quiz"> &lt;script href=&quot;xxx.js&quot;&gt;<br>
+                        <input type="radio" name="quiz" id="quiz-javascript-4"> &lt;script src=&quot;xxx.js&quot;&gt;<br>
+                        <input type="radio" name="quiz"> &lt;script name=&quot;xxx.js&quot;&gt;<br>
+                    </form>
+
+                    <h3>5. The external JavaScript file must contain the &lt;script&gt; tag.</h3>
+                    <form>
+                        <input type="radio" name="quiz"> True<br>
+                        <input type="radio" name="quiz" id="quiz-javascript-5"> False<br>
+                    </form>
+
+                    <div style="text-align:center">
+                        <input type="button" value="Submit" onclick="check_quiz('javascript');">
+                    </div>
                 </div>
             </div>
 
