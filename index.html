@@ -18,7 +18,7 @@
 
     <script>
       $(function() {
-        $( ".accordion" ).accordion();
+        $( ".accordion" ).accordion({collapsible: true, active: false});
       });
     </script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -108,13 +108,14 @@ With all this stuff, you will be able to create a simple and static web page, an
             <div class="accordion">
                 <h3>Example 1</h3>
                 <div>
+                    <h4>index.html</h4>
                     <pre><code class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;script&gt;
             function myFunction() {
-            document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
             }
         &lt;/script&gt;
     &lt;/head&gt;
@@ -129,31 +130,49 @@ With all this stuff, you will be able to create a simple and static web page, an
 
     &lt;/body&gt;
 &lt;/html&gt;
-
                     </code></pre>
                 </div>
                 <h3>Example 2</h3>
                 <div>
-                    <p>
-                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-                        suscipit faucibus urna.
-                    </p>
+                    <h4>index.html</h4>
+                    <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+
+        &lt;h1&gt;JavaScript in Body&lt;/h1&gt;
+
+        &lt;p id=&quot;demo&quot;&gt;A Paragraph.&lt;/p&gt;
+
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+        &lt;script&gt;
+            function myFunction() {
+                document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+            }
+        &lt;/script&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
                 </div>
                 <h3>Example 3</h3>
                 <div>
-                    <p>
-                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                    </p>
-                    <ul>
-                        <li>List item one</li>
-                        <li>List item two</li>
-                        <li>List item three</li>
-                    </ul>
+                    <h4>myScrypt.js</h4>
+                    <pre><code class="javascrypt">
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+                    </code></pre>
+                    <h4>index.html</h4>
+                    <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
                 </div>
                 <h3>Quiz</h3>
                 <div>
