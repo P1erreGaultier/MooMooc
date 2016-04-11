@@ -9,17 +9,31 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
+    <link rel="stylesheet" href="stylesheets/default.css">
+    <script src="javascripts/highlight.pack.js"></script>
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script>
+      $(function() {
+        $( ".accordion" ).accordion();
+      });
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Moomooc by P1erreGaultier</title>
+    <title>MooMooc</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Moomooc</h1>
+        <h1>MooMooc</h1>
         <h2>Mooc to learn how to make a web page</h2>
         <a href="https://github.com/P1erreGaultier/MooMooc" class="button"><small>View project on</small> GitHub</a>
       </div>
@@ -42,7 +56,7 @@ With all this stuff, you will be able to create a simple and static web page, an
 <a id="html" class="anchor" href="#html" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>HTML</h3>
           <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
           
-<h4>What is HTML?</h2>
+<h4>What is HTML?</h4>
 <p>HTML is a <strong>markup</strong> language for <strong>describing</strong> web documents (web pages).</p>
 <ul>
 <li>HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage</li>
@@ -52,8 +66,8 @@ With all this stuff, you will be able to create a simple and static web page, an
 </ul>
 <hr>
 
-<h4>HTML Example</h2>
-<h5>A small HTML document:</h3>
+<h4>HTML Example</h4>
+<h5>A small HTML document:</h5>
 <div>
  &lt;!DOCTYPE html&gt;<br>
 &lt;html&gt;<br>&lt;head&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>
@@ -61,7 +75,7 @@ With all this stuff, you will be able to create a simple and static web page, an
 &lt;body&gt;<br>&lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br>
     &lt;/body&gt;<br>&lt;/html&gt;
 </div>
-<h4>Example Explained</h2>
+<h4>Example Explained</h4>
 <ul>
 <li>The <strong>DOCTYPE</strong> declaration defines the document type to be HTML</li>
 <li>The text between <strong>&lt;html&gt;</strong> and <strong>&lt;/html&gt;</strong> describes an HTML document</li>
@@ -78,7 +92,7 @@ With all this stuff, you will be able to create a simple and static web page, an
 <li>The first tag in a pair is the <b> start tag,</b> the second tag is the <b> end tag</b></li>
 <li>The end tag is written like the start tag, but with a <strong>slash</strong> before the tag name </li>
 </ul>
-<h3>Web Browsers</h2>
+<h4>Web Browsers</h4>
 <p>The purpose of a web browser (Chrome, IE, Firefox, Safari) is to read HTML documents and display them.</p>
 <p>The browser does not display the HTML tags, but uses them to determine how to display the document:</p>
 <hr>
@@ -91,11 +105,86 @@ With all this stuff, you will be able to create a simple and static web page, an
 <a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>JAVASCRIPT</h3>
           <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
 
+            <div class="accordion">
+                <h3>Example 1</h3>
+                <div>
+                    <pre><code class="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+            document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;;
+            }
+        &lt;/script&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;h1&gt;JavaScript in Head&lt;/h1&gt;
+
+        &lt;p id=&quot;demo&quot;&gt;A Paragraph.&lt;/p&gt;
+
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Try it&lt;/button&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+
+                    </code></pre>
+                </div>
+                <h3>Example 2</h3>
+                <div>
+                    <p>
+                        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                        suscipit faucibus urna.
+                    </p>
+                </div>
+                <h3>Example 3</h3>
+                <div>
+                    <p>
+                        Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                        Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                        ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                        lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                    </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+                </div>
+                <h3>Quiz</h3>
+                <div>
+                    <p>
+                        Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                        et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                        faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                        mauris vel est.
+                    </p>
+                    <p>
+                        Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                        inceptos himenaeos.
+                    </p>
+                </div>
+            </div>
+
+<!--
 <h3>
 <a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CONCLUSION</h3>
+-->
         </section>
 
         <aside id="sidebar">
+          <h2>MooMooc Crew</h2>
+            <ul>
+                <li>Pierre Gaultier</li>
+                <li>Alexis Giraudet</li>
+                <li>Jasone Lenormand</li>
+            </ul>
+          <!--
           <a href="https://github.com/P1erreGaultier/MooMooc/zipball/master" class="button">
             <small>Download</small>
             .zip file
@@ -108,7 +197,9 @@ With all this stuff, you will be able to create a simple and static web page, an
           <p class="repo-owner"><a href="https://github.com/P1erreGaultier/MooMooc"></a> is maintained by <a href="https://github.com/P1erreGaultier">P1erreGaultier</a>.</p>
 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+          -->
         </aside>
+
       </div>
     </div>
 
